@@ -1,0 +1,1453 @@
+{
+	"info": {
+		"_postman_id": "48674e33-333f-4fa9-b3e1-ee63291ed003",
+		"name": "Hiring-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TEST - Sign Up - No Body",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'fields can't be empty'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('fields can\\'t be empty');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# No Body"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Missing Data1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'fields can't be empty'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('fields can\\'t be empty');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"{{username}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Missing Data"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Missing Data2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'fields can't be empty'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('fields can\\'t be empty');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Missing Data"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Missing Data3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'fields can't be empty'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('fields can\\'t be empty');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fname\": \"{{fname}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Missing Data"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Missing Data4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'fields can't be empty'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('fields can\\'t be empty');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lname\": \"{{lname}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Missing Data"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Username Length",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'username check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('username check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"foo\",\n    \"password\":\"{{password}}\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Username length must be at least 4"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Username Regex1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'username check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('username check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"fOo\",\n    \"password\":\"{{password}}\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Username can only contain lowercase character [a-z]"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Username Regex2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'username check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('username check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"foo123\",\n    \"password\":\"{{password}}\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Username cannot contain numbers"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Username Regex3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'username check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('username check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"foo#$!\",\n    \"password\":\"{{password}}\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Username cannot contain special characters"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Password Length",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'password check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('password check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"someusernamexyz\",\n    \"password\":\"foo\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Password Length must be at least 5"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Password Regex1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'password check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('password check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"someusernamexyz\",\n    \"password\":\"foobarbaz\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Password must contain: 1 Uppercase 1 Lowercase and 1 Number"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Password Regex2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'password check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('password check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"someusernamexyz\",\n    \"password\":\"FooBarBaz\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Password must contain: 1 Uppercase 1 Lowercase and 1 Number"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Password Regex3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'password check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('password check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"someusernamexyz\",\n    \"password\":\"foobar123\",\n    \"fname\":\"{{fname}}\",\n    \"lname\":\"{{lname}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Password must contain: 1 Uppercase 1 Lowercase and 1 Number"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Name Regex1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'fname or lname check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('fname or lname check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"somerandomusername\",\n    \"password\":\"FooBarBaz123\",\n    \"fname\":\"Foo1\",\n    \"lname\":\"Bar2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# First and Last name must only contain the English alphabets [a-zA-Z]"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Name Regex2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'fname or lname check failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('fname or lname check failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"somerandomusername\",\n    \"password\": \"{{password}}\",\n    \"fname\": \"Foo1#!\",\n    \"lname\": \"Bar2?_\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# First and Last name must only contain the English alphabets [a-zA-Z]"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign Up - Unique Username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'username already exists'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('username already exists');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\",\n    \"password\": \"someRandom123\",\n    \"fname\": \"somename\",\n    \"lname\": \"somename\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# First and Last name must only contain the English alphabets [a-zA-Z]"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign In - No Body",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'Please provide username and password'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('Please provide username and password');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signin"
+					]
+				},
+				"description": "# No Body"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign In - Missing Data1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'Please provide username and password'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('Please provide username and password');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signin"
+					]
+				},
+				"description": "# Missing Username"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign In - Missing Data2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'Please provide username and password'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('Please provide username and password');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"{{username}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signin"
+					]
+				},
+				"description": "# Missing Password"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Sign In - Invalid Credentials",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 400 on success\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'Invalid username/password'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('Invalid username/password');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"asjdkajsdhuwcnj\",\n    \"password\": \"XaS12lkmaiIjsOplKa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signin"
+					]
+				},
+				"description": "# Missing Password"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Access Info - No Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 401 on success\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'Please provide a JWT token'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('Please provide a JWT token');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user/me",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"me"
+					]
+				},
+				"description": "# Missing Password"
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Access Info - Invalid Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 401 on success\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"The result response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.error).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The result response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(false);",
+							"})",
+							"",
+							"pm.test(\"The error response has message key equal to 'JWT Verification Failed'\", () => {",
+							"    pm.expect(responseJson.error).to.eq('JWT Verification Failed');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbmFtZSI6IkZvbyIsInVzZXJuYW1lIxoiZmasdmFyYmF6IiwiaWF0IjoxNjE4NDg0ODgwfQ.I5fMcVuxLSwjFwGkxpfCkjxYR1UzBjmmgii_xV7IV_I",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/me",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"me"
+					]
+				},
+				"description": "# Missing Password"
+			},
+			"response": []
+		},
+		{
+			"name": "SIgn Up",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 200 on success\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"The success response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.message).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The success response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(true);",
+							"})",
+							"",
+							"pm.test(\"The success response has message key equal to 'SignUp success. Please proceed to Signin'\", () => {",
+							"    pm.expect(responseJson.message).to.eq('SignUp success. Please proceed to Signin');",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\",\n    \"fname\": \"{{fname}}\",\n    \"lname\": \"{{lname}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": "# Create your account\n\n## This saves your entry in `users.json` file"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 200 on success\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"The success response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.jwt).to.be.a('string');",
+							"    pm.expect(responseJson.message).to.be.an('string');",
+							"});",
+							"",
+							"pm.test(\"The success response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(true);",
+							"})",
+							"",
+							"pm.test(\"The success response has message key equal to 'Log In Successful'\", () => {",
+							"    pm.expect(responseJson.message).to.eq('Signin success');",
+							"})",
+							"",
+							"pm.collectionVariables.set(\"accessToken\", responseJson.jwt);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/signin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"signin"
+					]
+				},
+				"description": "# Sign in to your account\n\n## This will return you the JWT `accessToken`, you can use this token to access your information"
+			},
+			"response": []
+		},
+		{
+			"name": "Access Information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"",
+							"pm.test(\"Status is 200 on success\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"The success response has all required properties\", function() {",
+							"    pm.expect(responseJson.result).to.be.a('boolean');",
+							"    pm.expect(responseJson.data).to.be.an('object');",
+							"    pm.expect(responseJson.data).to.have.all.keys('fname', 'lname', 'password');",
+							"    pm.expect(responseJson.data.fname).to.be.a('string');",
+							"    pm.expect(responseJson.data.lname).to.be.a('string');",
+							"    pm.expect(responseJson.data.password).to.be.a('string');",
+							"});",
+							"",
+							"pm.test(\"The success response has result key equal to true\", () => {",
+							"    pm.expect(responseJson.result).to.eq(true);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/me",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"me"
+					]
+				},
+				"description": "# Aceess your information\n\n## Fetch user details"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://enigmatic-ridge-06779.herokuapp.com"
+		},
+		{
+			"key": "accessToken",
+			"value": ""
+		},
+		{
+			"key": "username",
+			"value": "foobarbaz"
+		},
+		{
+			"key": "password",
+			"value": "FooBarBaz123"
+		},
+		{
+			"key": "fname",
+			"value": "Foo"
+		},
+		{
+			"key": "lname",
+			"value": "Bar"
+		}
+	]
+}
