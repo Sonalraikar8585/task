@@ -237,7 +237,9 @@ Ensure Node.js and npm are installed, then:
 ```bash
 npm install -g newman
 ```
+## 🌐 Live Demo
 
-## License
+**Deployed at**: https://fastapi-auth-server.onrender.com
 
-This is a technical assessment project for iGnosis Tech.
+Test it:
+```bash
